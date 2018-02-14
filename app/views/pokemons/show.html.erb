@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pokemon.name %>
+</p>
+
+<p>
+  <strong>Type1:</strong>
+  <%= @pokemon.type1 %>
+</p>
+
+<p>
+  <strong>Type2:</strong>
+  <%= @pokemon.type2 %>
+</p>
+
+<p>
+  <strong>Ability 1:</strong>
+  <%= @pokemon.ability_1 %>
+</p>
+
+<p>
+  <strong>Ability 2:</strong>
+  <%= @pokemon.ability_2 %>
+</p>
+
+<p>
+  <strong>Hidden ability:</strong>
+  <%= @pokemon.hidden_ability %>
+</p>
+
+<%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
+<%= link_to 'Back', pokemons_path %>

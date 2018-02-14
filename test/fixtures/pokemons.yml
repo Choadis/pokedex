@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type1: MyString
+  type2: MyString
+  ability_1: MyString
+  ability_2: MyString
+  hidden_ability: MyString
+
+two:
+  name: MyString
+  type1: MyString
+  type2: MyString
+  ability_1: MyString
+  ability_2: MyString
+  hidden_ability: MyString
