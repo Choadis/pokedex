@@ -1,6 +1,10 @@
 class PokemonsController < ApplicationController
   before_action :set_pokemon, only: [:show, :edit, :update, :destroy]
 
+def search
+  @search = Pokemons.new(params[:pokemon])
+  @pokemon = Pokemons.by_name(@search.name)
+end
   # GET /pokemons
   # GET /pokemons.json
   def index

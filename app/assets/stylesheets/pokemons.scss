@@ -9,7 +9,7 @@
     display: none;
   }
   .form{
-    margin-top: 180px;
+    margin-top: 140px;
     margin-left: 25px;
     display: flex;
     justify-content: space-between;
@@ -26,5 +26,13 @@ display: block;
       padding: 5px;
       display: block;
     }
+  }
+  .submit{
+    // display: none;
+    z-index: 99;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-top: 95px;
+    color: white;
   }
 }
