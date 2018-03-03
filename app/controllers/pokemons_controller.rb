@@ -4,7 +4,8 @@ class PokemonsController < ApplicationController
   # GET /pokemons
   # GET /pokemons.json
   def index
-    @pokemons = Pokemon.all
+    @pokemon = Pokemon.all
+    @pokemon.where("name ilike %?%", "bulb") if "bulb"
   end
 
   # GET /pokemons/1

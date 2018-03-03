@@ -1,37 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pokemons</h1>
-
+<h1 class="title">Pokemon</h1>
+<body id="index">
 <table>
-  <thead>
+  <!-- <thead>
     <tr>
       <th>Name</th>
       <th>Type1</th>
       <th>Type2</th>
-      <th>Ability1</th>
-      <th>Ability2</th>
+      <th>Ability 1</th>
+      <th>Ability 2</th>
       <th>Hidden ability</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @pokemons.each do |pokemon| %>
-      <tr>
-        <td><%= pokemon.name %></td>
-        <td><%= pokemon.type1 %></td>
-        <td><%= pokemon.type2 %></td>
-        <td><%= pokemon.ability1 %></td>
-        <td><%= pokemon.ability2 %></td>
-        <td><%= pokemon.hidden_ability %></td>
-        <td><%= link_to 'Show', pokemon %></td>
-        <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
-        <td><%= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  </thead> -->
 </table>
-
+<form class="form">
+  <div class="col1">
+  <input type="text" name:"Pokemon" class="input" placeholder="Pokemon">
+  <br>
+  <input type="text" name:"type1" class="input" placeholder="Type 1">
+  <br>
+  <input type="text" name:"type2" class="input" placeholder="Type 2">
+</div>
+<div class="col2">
+  <input type="text" name:"ability1" class="input" placeholder="Ability 1">
 <br>
+  <input type="text" name:"ability2" class="input" placeholder="Ability 2">
+<br>
+  <input type="text" name:"hidden_ability" class="input" placeholder="Hidden Ability">
+</div>
+</div>
+</form>
+<%= link_to "!", new_pokemon_path, class: "btn btn-lg btn-primary" %>
 
-<%= link_to 'New Pokemon', new_pokemon_path %>
+</table>
+</body>
