@@ -4,13 +4,20 @@ class PokemonsController < ApplicationController
   # GET /pokemons
   # GET /pokemons.json
   def index
-    @pokemon = Pokemon.all
-    @pokemon.where("name ilike %?%", "bulb") if "bulb"
+    @pokemon = Pokemon.search(params[:search])
   end
 
   # GET /pokemons/1
   # GET /pokemons/1.json
   def show
+  end
+
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
   end
 
   # GET /pokemons/new
@@ -63,13 +70,13 @@ class PokemonsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pokemon
-      @pokemon = Pokemon.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_pokemon
+    @pokemon = Pokemon.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def pokemon_params
-      params.require(:pokemon).permit(:name, :type1, :type2, :ability1, :ability2, :hidden_ability)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def pokemon_params
+    params.require(:pokemon).permit(:name, :type1, :type2, :ability1, :ability2, :hidden_ability)
+  end
 end
