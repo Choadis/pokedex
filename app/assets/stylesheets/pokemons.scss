@@ -1,6 +1,9 @@
 // Place all the styles related to the pokemons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 #index{
   background-image: url('/assets/pokedex.gif');
   // background-color: red;
@@ -9,11 +12,11 @@
     display: none;
   }
   .form{
-    margin-top: 140px;
-    margin-left: 25px;
+    margin-top: 170px;
+    margin-left: 70px;
     display: flex;
     justify-content: space-between;
-    width: 250px;
+    width: 230px;
   .col1{
 display: block;
   }
@@ -27,12 +30,45 @@ display: block;
       display: block;
     }
   }
-  .submit{
-    // display: none;
-    z-index: 99;
+  .search_button{
+    display: block;
+    max-width: 10px;
     font-size: 30px;
-    margin-left: 25px;
-    margin-top: 95px;
+    margin-left: 60px;
+    margin-top: 70px;
     color: white;
   }
+}
+#index1{
+  background-image: url('/assets/paint_dex.png');
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  .notify{
+    display: inline;
+  }
+}
+.button{
+  max-width: 120px;
+  color: white;
+  padding: 15px;
+  margin-left: 15px;
+  background-color: blue;
+  border-radius: 10px;
+}
+.none{
+  display: none;
+}
+.sign_in_notify{
+  margin-left: 130px;
+  margin-top: -30px;
+}
+.sign_in_button{
+  max-width: 80px;
+  display: block;
+  color: white;
+  padding: 15px;
+  margin-left: 15px;
+  margin-top: 510px;
+  background-color: blue;
+  border-radius: 10px;
 }
