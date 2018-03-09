@@ -17,34 +17,6 @@
     // display: flex;
     // justify-content: space-between;
     width: 230px;
-    .col1{
-      #name_search{
-        max-width: 100px;
-        margin-bottom: 10px;
-      }
-      #type1_search{
-        max-width: 100px;
-        margin-bottom: 10px;
-      }
-      #type2_search{
-        max-width: 100px;
-        margin-bottom: 10px;
-      }
-    }
-    .col2{
-      #ability1_search{
-        max-width: 100px;
-        margin-bottom: 10px;
-      }
-      #ability2_search{
-        max-width: 100px;
-        margin-bottom: 10px;
-      }
-      #hidden_ability_search{
-        max-width: 100px;
-        margin-bottom: 10px;
-      }
-    }
   }
   .search_button{
     display: block;
@@ -56,7 +28,7 @@
   }
 }
 #index1{
-  background-image: url('/assets/paint_dex.png');
+  background-image: asset_url('paint_dex.png');
   background-repeat: no-repeat;
   margin-top: 20px;
   .notify{
