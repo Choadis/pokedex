@@ -1,7 +1,11 @@
 <%= form_with(model: pokemon, local: true) do |form| %>
 
+<div class="field">
+  <%= form.label :picture %>
+  <%= form.file_field :picture %>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="actions">
+  <%= form.submit %>
+</div>
 <% end %>

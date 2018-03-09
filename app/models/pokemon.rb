@@ -4,4 +4,5 @@ class Pokemon < ApplicationRecord
 
   belongs_to :type1, :foreign_key => :type1_id, :class_name => 'Type'
   belongs_to :type2, :foreign_key => :type2_id, :class_name => 'Type'
+  mount_uploader :picture, PictureUploader
 end

@@ -31,20 +31,20 @@
         margin-bottom: 10px;
       }
     }
-.col2{
-  #ability1_search{
-    max-width: 100px;
-    margin-bottom: 10px;
-  }
-  #ability2_search{
-    max-width: 100px;
-    margin-bottom: 10px;
-  }
-  #hidden_ability_search{
-    max-width: 100px;
-    margin-bottom: 10px;
-  }
-}
+    .col2{
+      #ability1_search{
+        max-width: 100px;
+        margin-bottom: 10px;
+      }
+      #ability2_search{
+        max-width: 100px;
+        margin-bottom: 10px;
+      }
+      #hidden_ability_search{
+        max-width: 100px;
+        margin-bottom: 10px;
+      }
+    }
   }
   .search_button{
     display: block;
@@ -89,6 +89,7 @@
   border-radius: 10px;
 }
 .results{
+  margin-top: -500px;
   margin-left: 1000px;
 }
 .log_out_button{
@@ -98,4 +99,6 @@
   padding: 15px;
   background-color: blue;
   border-radius: 10px;
+  margin-top: 350px;
+  margin-left: 50px;
 }

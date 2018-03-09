@@ -5,6 +5,7 @@
     <%= submit_tag "Search", :name => nil %>
     <% end %>
   </form>
+  <%= link_to "Log out", logout_path, method: :delete, class: 'log_out_button' %>
   <ul class="results">
     <p>Results:</p>
     <% @pokemon.each do |p| %>
