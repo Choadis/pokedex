@@ -5,7 +5,7 @@
 @import "bootstrap";
 
 #index{
-  background-image: url(<%= asset_path 'pokedex.gif' %>);
+  background-image: asset_url('pokedex.gif');
   // background-color: red;
   background-repeat: no-repeat;
   .title{
