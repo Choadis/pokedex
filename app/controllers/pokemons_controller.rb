@@ -1,23 +1,27 @@
 class PokemonsController < ApplicationController
-  before_action :set_pokemon, only: [:show, :edit, :update, :destroy]
+  before_action :authorize
 
   # GET /pokemons
   # GET /pokemons.json
-  def index
-    @pokemon = Pokemon.search(params[:search])
-  end
+  # def index
+  #   @pokemon = Pokemon.search(params[:search])
+  # end
 
   # GET /pokemons/1
   # GET /pokemons/1.json
   def show
   end
 
-  def self.search(search)
-    if search
-      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+  def index
+  end
+
+  def search
+    @pokemon = if params[:name_search]
+      Pokemon.where('name ILIKE ?', "%#{params[:name_search]}%")
     else
-      find(:all)
+      Pokemon.all
     end
+    byebug
   end
 
   # GET /pokemons/new

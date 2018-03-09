@@ -1,0 +1,15 @@
+<body id="index">
+  <form class="form">
+    <%= form_tag("/search", method: "get") do %>
+    <%= text_field_tag(:name_search, nil, placeholder: 'Name') %>
+    <%= submit_tag "Search", :name => nil %>
+    <% end %>
+  </form>
+  <ul class="results">
+    <p>Results:</p>
+    <% @pokemon.each do |p| %>
+    <li><%= p.name %></li>
+    <% end %>
+  </ul>
+</table>
+</body>

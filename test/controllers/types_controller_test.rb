@@ -20,7 +20,7 @@ class TypesControllerTest < ActionDispatch::IntegrationTest
       post types_url, params: { type: {  } }
     end
 
-    assert_redirected_to type_url(Type.last)
+    assert_redirected_to types_url(Type.last)
   end
 
   test "should show type" do
