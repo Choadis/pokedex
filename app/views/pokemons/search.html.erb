@@ -8,8 +8,9 @@
   <ul class="results">
     <p>Results:</p>
     <% @pokemon.each do |p| %>
-    <li><%= p.name %></li>
+    <li>
+      <%= link_to p.name, p %>
+    </li>
     <% end %>
   </ul>
-</table>
 </body>

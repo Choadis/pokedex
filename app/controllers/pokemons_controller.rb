@@ -10,6 +10,7 @@ class PokemonsController < ApplicationController
   # GET /pokemons/1
   # GET /pokemons/1.json
   def show
+    render 'edit'
   end
 
   def index
@@ -21,7 +22,6 @@ class PokemonsController < ApplicationController
     else
       Pokemon.all
     end
-    byebug
   end
 
   # GET /pokemons/new
@@ -31,6 +31,7 @@ class PokemonsController < ApplicationController
 
   # GET /pokemons/1/edit
   def edit
+    @pokemon = Pokemon.find(params[:id])
   end
 
   # POST /pokemons
