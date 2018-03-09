@@ -14,21 +14,37 @@
   .form{
     margin-top: 170px;
     margin-left: 70px;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     width: 230px;
-  .col1{
-display: block;
-  }
-  .col2{
-    display: block;
-  }
-    .input{
-      border: 2px solid black;
-      width: 100px;
-      padding: 5px;
-      display: block;
+    .col1{
+      #name_search{
+        max-width: 100px;
+        margin-bottom: 10px;
+      }
+      #type1_search{
+        max-width: 100px;
+        margin-bottom: 10px;
+      }
+      #type2_search{
+        max-width: 100px;
+        margin-bottom: 10px;
+      }
     }
+.col2{
+  #ability1_search{
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+  #ability2_search{
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+  #hidden_ability_search{
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+}
   }
   .search_button{
     display: block;
@@ -58,11 +74,11 @@ display: block;
 .none{
   display: none;
 }
-.sign_in_notify{
+.login_notify{
   margin-left: 130px;
   margin-top: -30px;
 }
-.sign_in_button{
+.login_button{
   max-width: 80px;
   display: block;
   color: white;
@@ -71,4 +87,7 @@ display: block;
   margin-top: 510px;
   background-color: blue;
   border-radius: 10px;
+}
+.results{
+  margin-left: 1000px;
 }

@@ -1,21 +1,15 @@
 <body id="index">
-<form class="form">
-  <div class="col1">
-  <input type="text" name:"Pokemon" class="input" placeholder="Pokemon">
-  <br>
-  <input type="text" name:"type1" class="input" placeholder="Type 1">
-  <br>
-  <input type="text" name:"type2" class="input" placeholder="Type 2">
-</div>
-<div class="col2">
-  <input type="text" name:"ability1" class="input" placeholder="Ability 1">
-<br>
-  <input type="text" name:"ability2" class="input" placeholder="Ability 2">
-<br>
-  <input type="text" name:"hidden_ability" class="input" placeholder="Hidden Ability">
-</div>
-</form>
-<%= link_to "!", new_pokemon_path, class: "search_button, none" %>
-
+  <form class="form">
+    <%= form_tag("/search", method: "get") do %>
+    <%= text_field_tag(:name_search, nil, placeholder: 'Name') %>
+    <%= submit_tag "Search", :name => nil %>
+    <% end %>
+  </form>
+  <ul class="results">
+    <p>Results:</p>
+    <% @pokemon.each do |p| %>
+    <li><%= p.name %></li>
+    <% end %>
+  </ul>
 </table>
 </body>
