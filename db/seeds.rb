@@ -11,13 +11,11 @@ CSV.foreach("#{Rails.root}/db/seedData/CSVPkdx V5.14.csv", headers: true) do |ro
   Type.find_or_create_by(name: row["Type I"])
   Type.find_or_create_by(name: row["Type II"])
 end
-end
 
 CSV.foreach("#{Rails.root}/db/seedData/CSVPkdx V5.14.csv", headers: true) do |row|
   Ability.find_or_create_by(name: row["Ability I"])
   Ability.find_or_create_by(name: row["Ability II"])
   Ability.find_or_create_by(name: row["Hidden Ability"])
-end
 end
 
 CSV.foreach("#{Rails.root}/db/seedData/CSVPkdx V5.14.csv", :headers => true) do |row|
@@ -27,5 +25,4 @@ CSV.foreach("#{Rails.root}/db/seedData/CSVPkdx V5.14.csv", :headers => true) do 
   ability2 = Ability.find_by(name: row ['Ability II'])
   hidden = Ability.find_by(name: row['Hidden Ability'])
   Pokemon.create(name: row['Pokemon'], type1: type1, type2: type2, abilities: [ability1, ability2, hidden].compact)
-end
 end

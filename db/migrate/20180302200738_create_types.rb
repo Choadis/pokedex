@@ -7,6 +7,7 @@ class CreateTypes < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+  end
 
   def down
     drop_table :types

@@ -3,7 +3,7 @@ require 'csv'
 class CreatePokemons < ActiveRecord::Migration[5.1]
   def up
     create_table :pokemons do |t|
-      t.string :name
+      t.string :name, unique: true
       t.integer :type1_id
       t.integer :type2_id
       t.timestamps
@@ -18,6 +18,7 @@ class CreatePokemons < ActiveRecord::Migration[5.1]
       t.belongs_to :ability, foreign_key: true
       t.timestamps
     end
+  end
 
   def down
     drop_table :pokemons
