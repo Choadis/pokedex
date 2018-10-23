@@ -18,7 +18,7 @@ https://rubyonrails.org/
 
 ## Running the tests
 
-Because this is a tutorial, I didn't write any tests
+Navigate to the test directory and run `rails test`
 
 ## Built With
 
