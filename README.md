@@ -1,24 +1,34 @@
-# README
+# Pokedex
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a pokedex made in rails
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+Download the files locally and run them through the browser with Rails
+https://rubyonrails.org/
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+* Ruby on rails
 
-* Database creation
+### Installing
 
-* Database initialization
+* Install Rails (`gem install rails` to install rails locally,`rails -v` to ensure that it's installed)
+* Navigate to the directory and run `rails -projectname-` to start the project
 
-* How to run the test suite
+## Running the tests
 
-* Services (job queues, cache servers, search engines, etc.)
+Because this is a tutorial, I didn't write any tests
 
-* Deployment instructions
+## Built With
 
-* ...
+* Ruby on rails (https://rubyonrails.org/) - The web framework used
+
+## Authors
+
+* **Stefen Dahlgren** - *Initial work* - [Github](https://github.com/Choadis)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
